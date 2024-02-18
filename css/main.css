@@ -1,0 +1,254 @@
+/*Classlar burada */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+footer{
+    background-color: #222;
+    color: red;
+    padding: 40px;
+}
+body{
+  color: red;
+    width:100%;
+    margin: 0px;
+    background-color: #000;
+    font-family: 'Kode Mono';
+    overflow-x: hidden;
+}
+hr{width: 98.5%; float:left; border-top: solid 1px red; color: red;}
+a{text-decoration: none; color: red;}
+h3{
+    color: red;
+    
+    font-weight: 200;
+    font-size: 30px;
+}
+.homeicon{ font-size: 18px; margin-left: 15px; margin-right: 20px;}
+.homepage-title{
+font-size: 30pt;
+font-weight: 100;
+margin-top: 17%;
+margin-bottom: 0;
+
+}
+.swipedown{
+    font-size: 18px; margin-right: 20px;
+    transform: rotate(90deg);
+    position: fixed;
+    bottom: 75px;
+    right: -60px;
+    z-index: 8000;
+    background-color: black;
+    padding: 20px; 
+}
+.homepage-occupation{
+    font-weight: 100;
+    margin-bottom: 30%;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.social-icon{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.edubox {
+    padding: 30px;
+    background-color: #252525;
+    width: 25%;
+    height: 400px;
+    margin: 10px;
+    color: #000;
+    float: left;
+    border-radius: 16px;
+}
+@keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      transform: translateZ(10px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+#navigation-bar{
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+#socials{
+    float: right;
+    padding-right: 60px;
+}
+#homepage{
+    width: 100%;
+    height: 100%;
+    
+}
+#biography{
+    width: 100%;
+    
+     
+    padding-top: 15%;
+    Padding-bottom: 20%;
+   
+    color: red !important;
+    
+}
+#modalmenu{
+  display: flex;
+  justify-content: center;
+  margin-right: 0px;
+  
+}
+
+
+#art{
+ margin:0;
+
+ height: 1090px;
+}
+#design{
+  margin:0;
+
+  height: 680px;
+ }
+div.gallery {
+  margin: 5px;
+  background-color: #000;
+  
+  border: 2px solid #000;
+  float: left;
+  width: 320px;
+  overflow: hidden;
+
+}
+.modal{
+  background-color: black !important;}
+
+div.gallery img {
+  width: 320px;
+  height: 240px;
+  z-index: 1;
+}
+
+div.desc {
+  padding-top:8px;
+  padding-bottom: 12px;
+  
+  text-align: center;
+  color: red;
+  
+}
+
+* {box-sizing:border-box}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.rain {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.rain.back-row {
+  display: none;
+  z-index: 1;
+  bottom: 60px;
+  opacity: 0.5;
+}
+
+body.back-row-toggle .rain.back-row {
+  display: block;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 15px;
+  height: 120px;
+  pointer-events: none;
+  animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  75% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(90vh);
+  }
+}
+
+.stem {
+  width: 1px;
+  height: 60%;
+  margin-left: 7px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+  animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.splat {
+  width: 15px;
+  height: 10px;
+  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: splat 0.5s linear infinite;
+  display: none;
+}
+
+body.splat-toggle .splat {
+  display: block;
+}
+
+@keyframes splat {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}

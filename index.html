@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- WARNING: All that code written by Şeref Can MERTDOĞAN. Do NOT use it without permission.-->
+<!-- More information: https://canmertdogan.com/license.html-->
+<html>
+
+<head>
+    <title>rainr00t's hall</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <!-- Remember to include jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="path/to/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="path/to/default-skin/default-skin.css">
+
+    <!-- Core JS file -->
+    <script src="path/to/photoswipe.min.js"></script>
+
+    <!-- UI JS file -->
+    <script src="path/to/photoswipe-ui-default.min.js"></script>
+</head>
+
+<body >
+    <div id="navigation-bar">
+        <a class="homeicon" href="#home"><i class="fas fa-home"></i></a>
+
+        <a class="biography-link" href="#biography">About </a>
+        <!--
+        <a class="art-link" href="#art">Portfolio &nbsp; / &nbsp; </a>
+        <a class="design-link" href="#design">Services &nbsp; / &nbsp; </a>
+        <a class="contact-link" href="#contact">Contact</a>
+-->
+        <div id="socials">
+            <a class="social-icon" href="https://discord.gg/R6KMwrXkkP"><i class="fab fa-discord"></i></a>
+            <a class="social-icon" href="https://github.com/rainr00t"><i class="fab fa-github"></i></a>
+
+
+        </div>
+
+        
+    </div>
+
+    <div id="homepage">
+        <br><br><br>
+        <h1 class="homepage-title" align="center">I am <strong style="color: white;">rainr00t.</strong></h1>
+        <h2 class="homepage-occupation" align="center">analyst, programmer, webmaster.</h2>
+        <a class="swipedown"> Scroll Down >>></a>
+    </div>
+    <div id="biography">
+
+        <h3 style="font-size: 44px; margin-left: 0px; margin-bottom:0px !important; font-style: bold; color: red !important;"
+            align=center>About Me
+        </h3>
+        <p align=center style="padding-left: 20%; padding-right: 20%; font-size: 20px; font-weight: 900; color: white ">Who am I?</p>
+        <br>
+        <p align=center style="padding-left: 20%; padding-right: 20%; font-size: 20px;">I'm <strong style="color: white !important;">rainr00t</strong>, a self-motivated individual with a strong interest in cybersecurity. While I opted for an alternative path to traditional education, I've actively pursued knowledge and developed my technical skills through independent learning. <br><br> I possess a solid foundation in various programming languages, including C#, C++, HTML, CSS, JavaScript, PHP, and Python.
+
+            My primary focus lies within the cybersecurity domain, but my IT skillset extends beyond. <br><br> I am versatile and adaptable, capable of assuming diverse roles such as SOC analyst, webmaster, or general IT support, addressing a wide range of technical challenges.</p> <br><br>
+            
+        <p align= center style="margin-top: -10px; padding-left: 20%; padding-right: 20%; font-size: 20px; color: white !important">I am constantly seeking opportunities to learn and collaborate. If you have any projects, technical problems, or simply wish to engage in discussions related to technology, please don't hesitate to reach out.</p>
+
+        
+    </div>
+    </div>
+    </div>
+<!--
+    <div id="art">
+        <p style="font-size: 44px; margin-left: 0px; margin-top: 0px; padding-top: 50px; font-style: bold; color: red !important;"
+            align=center>Portfolio
+        </p>
+
+
+        
+</div>
+    
+    <div id="contact">
+        <p style="font-size: 44px; margin-left: 0px; margin-top: 0px; padding-top: 50px; font-style: bold; color: red !important;"
+            align=center>
+            Contact
+        </p>
+    </div>
+
+-->
+    <footer>
+        2021 - rainr00t. <a style="color: white; text-decoration: underline"
+            href="#"> Feel the digital rain.</a>
+    </footer>
+</body>
+
+</html>
+
+
+<script>
+    var makeItRain = function() {
+  //clear out everything
+  $('.rain').empty();
+
+  var increment = 0;
+  var drops = "";
+  var backDrops = "";
+
+  while (increment < 100) {
+    //couple random numbers to use for various randomizations
+    //random number between 98 and 1
+    var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
+    //random number between 5 and 2
+    var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
+    //increment
+    increment += randoFiver;
+    //add in a new raindrop with various randomizations to certain CSS properties
+    drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+    backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+  }
+
+  $('.rain.front-row').append(drops);
+  $('.rain.back-row').append(backDrops);
+}
+
+
+makeItRain();
+</script>
