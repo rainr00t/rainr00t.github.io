@@ -339,6 +339,7 @@ div.desc {
   button{
     width: 287px !important;
   }
+  .swipedown{ display:none;}
  }
 
 #contact{
