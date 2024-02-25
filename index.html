@@ -164,6 +164,7 @@
             align=center>
             Contact</p>
             <div id="container2" align="center">
+                
                 <form id="contactForm" style="max-width: 400px; margin: 0 auto;">
               
                   <input type="text" id="name" placeholder="Name" name="name" style="padding: 10px; background-color: #000; color: red; border: 2px solid red; width: 100%; font-family: 'Kode Mono';" required>
@@ -175,12 +176,14 @@
                   <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required style="padding: 10px; background-color: #000; color: red; border: 2px solid red; width: 100%; font-family: 'Kode Mono';"></textarea>
                   <br><br>
               
-                  <button type="button" style="padding: 10px; background-color: #000; color: red; border: 2px solid red; width: 425px; font-family: 'Kode Mono'; box-sizing: border-box;" onclick="submitForm()"><strong>Submit</strong></button>
+                  <button type="button" style="padding: 10px; background-color: #000; color: red; border: 2px solid red; width: 425px; font-family: 'Kode Mono'; box-sizing: border-box;" onclick="sendEmail()"><strong>Submit</strong></button>
               
                 </form>
+           
+          
               </div>
               
-        
+           
     </div>
 
     <footer>
@@ -191,3 +194,14 @@
 
 </html>
 
+<script>
+    function sendEmail() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      var mailtoLink = `mailto:rainr00t@proton.me?subject=${encodeURIComponent('Contact Form Submission')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`)}`;
+
+      window.location.href = mailtoLink;
+    }
+  </script>
